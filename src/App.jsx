@@ -1,12 +1,11 @@
-import './App.css'
+import Navbar from "./components/navbar";
 
 function App() {
-
   return (
     <>
-      <div> I LOVE LIZA MAHARJAN </div>
+      <Navbar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
