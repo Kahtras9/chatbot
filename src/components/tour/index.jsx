@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { packages } from "./packageData";
-import Popup from "./popup";
+import Popup from "./Popup";
 import { Container, PackageCard, PackageTitle, PackageDescription, SeeMoreButton } from "./index.sc";
 
 const Tour = () => {

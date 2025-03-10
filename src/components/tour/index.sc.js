@@ -1,76 +1,43 @@
 import styled from "styled-components";
 
-export const TourContainer = styled.div`
-  padding: 4rem;
-  background-color: #fff;
-  color: #333;
+export const Container = styled.div`
+  padding: 2rem;
 `;
 
-export const TourTitle = styled.h2`
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-family: 'Orbitron', sans-serif;
+export const PackageCard = styled.div`
+  background: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-export const TourDescription = styled.p`
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 3rem;
-`;
-
-export const ContentWrapper = styled.div`
-  display: flex;
-  gap: 3rem;
-`;
-
-export const ImageWrapper = styled.div`
-  flex-shrink: 0;
-`;
-
-export const TourImage = styled.img`
-  width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-`;
-
-export const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
-export const InfoTitle = styled.h3`
+export const PackageTitle = styled.h2`
   font-size: 2rem;
   color: #222;
-  margin-bottom: 0.5rem; /* Reduced gap after header */
 `;
 
-export const InfoDescription = styled.p`
+export const PackageDescription = styled.p`
   font-size: 1rem;
   color: #555;
+  margin-bottom: 1rem;
 `;
 
 export const SeeMoreButton = styled.button`
+  padding: 0.6rem 1.2rem;
   background-color: #007bff;
-  color: #fff;
+  color: white;
   border: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 1rem;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `;
 
-export const PopupOverlay = styled.div`
+export const PopupContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
@@ -81,46 +48,61 @@ export const PopupOverlay = styled.div`
 export const PopupContent = styled.div`
   background: #fff;
   padding: 2rem;
+  border-radius: 8px;
   width: 60%;
   max-height: 80vh;
   overflow-y: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #ff4d4d;
-  color: #fff;
+  font-size: 1.5rem;
+  background: none;
   border: none;
-  padding: 0.6rem;
-  border-radius: 50%;
   cursor: pointer;
-  font-size: 1rem;
 `;
 
-export const PopupTitle = styled.h3`
-  font-size: 2rem;
-  margin-bottom: 0.5rem; /* Reduced gap after header */
-`;
-
-export const PopupText = styled.p`
-  font-size: 1rem;
-  line-height: 1.5;
+export const Title = styled.h1`
+  font-size: 2.5rem;
   color: #333;
 `;
 
-export const PopupList = styled.ul`
-  padding-left: 1.2rem;
-  margin-bottom: 0.5rem; /* Reduced gap under list */
+export const Description = styled.p`
+  font-size: 1.2rem;
+  color: #555;
 `;
 
-export const PopupListItem = styled.li`
+export const Details = styled.div`
   font-size: 1rem;
-  line-height: 1.4;
-  color: #555;
-  margin-bottom: 0.5; /* Tighter spacing for bullet points */
+  color: #444;
+  line-height: 1.6;
+
+  strong {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: underline;
+  }
+`;
+
+export const BookNowButton = styled.button`
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 `;
