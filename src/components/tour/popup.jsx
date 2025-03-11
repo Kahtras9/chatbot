@@ -16,3 +16,4 @@ const Popup = ({ packageData, onClose }) => {
 };
 
 export default Popup;
+
