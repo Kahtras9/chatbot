@@ -6,21 +6,22 @@ import Tour from "./components/tour";
 import Booking from "./components/booking";
 import Feedback from "./components/feedback";
 import FAQ from "./components/FAQ";
+import Footer from "./components/footer";
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar />
-      <Home />
-      <Video />
-      <Spec />
-      <Tour />
-      <Booking />
-      <Feedback />
-      <FAQ />
+      <div id="home"><Home /></div>
+      <div id="about"><Video /></div>
+      <div id="bikes"><Spec /></div>
+      <div id="tour"><Tour /></div>
+      <div id="booking"><Booking /></div>
+      <div id="feedbacks"><Feedback /></div>
+      <div id="faq"><FAQ /></div>
+      <Footer />
     </>
   );
-}
+};
 
 export default App;
-
