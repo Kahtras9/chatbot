@@ -7,6 +7,7 @@ import Booking from "./components/booking";
 import Feedback from "./components/feedback";
 import FAQ from "./components/FAQ";
 import Footer from "./components/footer";
+import Chatbot from "./components/chatbot";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <div id="feedbacks"><Feedback /></div>
       <div id="faq"><FAQ /></div>
       <Footer />
+      <Chatbot />
     </>
   );
 };
