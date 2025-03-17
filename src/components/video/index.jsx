@@ -28,18 +28,23 @@ const Video = () => {
 
       <LeftContent>
         <Description>
-          Each dirt bike is a masterpiece, combining rugged design with cutting-edge engineering. Whether you're an off-road adventurer or a dirt biking enthusiast, it's built to conquer every trail.
+          Each dirt bike is a masterpiece, combining rugged design with
+          cutting-edge engineering. Whether you're an off-road adventurer or a
+          dirt biking enthusiast, it's built to conquer every trail.
         </Description>
         <VideoButton onClick={openModal}>SEE VIDEO →</VideoButton>
       </LeftContent>
 
       <RightContent>
-        <Title>Unleashing the latest tech-driven beasts for ultimate off-road performance</Title>
+        <Title>
+          Unleashing the latest tech-driven beasts for ultimate off-road
+          performance
+        </Title>
       </RightContent>
 
       <NavigationButtons>
-        <NavButton>&larr;</NavButton>
-        <NavButton>&rarr;</NavButton>
+        <NavButton direction="left">&larr;</NavButton>
+        <NavButton direction="right">&rarr;</NavButton>
       </NavigationButtons>
 
       {isOpen && (

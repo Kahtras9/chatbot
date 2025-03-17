@@ -1,99 +1,155 @@
 import styled from "styled-components";
 
+/* ---------------------- */
+/* PAGE CONTAINER         */
+/* ---------------------- */
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2rem;
-  background-color: #1a1a1a;
+  padding: 1rem 3%;
+  background-color: #1f1f21;
   color: #fff;
   min-height: 100vh;
 `;
 
 export const Content = styled.div`
-  margin-bottom: 2rem;
+  position: relative;
 `;
 
+/* HEADINGS & TEXT */
 export const Heading = styled.h1`
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
   font-size: 3.5rem;
   line-height: 1.2;
-  font-weight: bold;
   margin-bottom: 1.5rem;
-  font-family: 'Orbitron', sans-serif;
+  max-width: 70%;
+  word-wrap: break-word;
 `;
 
 export const Description = styled.p`
   font-size: 1rem;
-  margin-bottom: 1.5rem;
-  max-width: 500px;
+  margin-bottom: 2rem;
+  max-width: 45%;
   color: #aaa;
 `;
 
-export const Button = styled.button`
-  padding: 0.8rem 2rem;
-  background-color: #007bff;
-  color: #fff;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  font-weight: bold;
+/* PILL-SHAPED 'SEE MORE' BUTTON */
+export const SeeMoreButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+
+  padding: 0.75rem 1.25rem;
+  color: #00b4d8;
+  background: transparent;
+  border: 2px solid #00b4d8;
+  border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease;
 
+  .arrow {
+    font-size: 1rem;
+  }
+
   &:hover {
-    background-color: transparent;
-    border: 2px solid #007bff;
+    background: #00b4d8;
+    color: #111;
   }
 `;
 
+/* IMAGE WRAPPER */
 export const ImageWrapper = styled.div`
+  transform: translateY(-1rem);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  margin-top: 0rem; /* Adjust this to control vertical spacing */
 
   img {
-    width: 600px;
-    height: auto;
+    width: 95vh;
+    height: 67vh;
   }
 `;
 
+/* SPECS TO THE RIGHT */
 export const Specs = styled.div`
-  position: relative;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  right: 0%;
+  top: 33%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 0rem;
-`;
-
-export const SpecItem = styled.div`
   text-align: right;
 `;
 
+export const SpecItem = styled.div``;
+
 export const SpecValue = styled.div`
-  font-size: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 28px;
   font-weight: bold;
 `;
 
 export const SpecLabel = styled.div`
-  font-size: 0.8rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
   text-transform: uppercase;
   color: #aaa;
 `;
 
+/* ---------------------- */
+/* PAGINATION NUMBERS     */
+/* ---------------------- */
 export const Pagination = styled.div`
+  /* Position near the left side */
+  position: absolute;
+  bottom: 0%; /* or wherever you want it vertically */
+  left: 4%;
+
+  /* Display items in a row (horizontal) */
   display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 10px;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
 `;
 
-export const Dot = styled.div`
-  width: 12px;
-  height: 12px;
-  background-color: ${({ active }) => (active ? "#007bff" : "#444")};
-  border-radius: 50%;
+/**
+ * Instead of round dots, we display numbers.
+ * 'active' means highlight in a different color.
+ */
+export const PaginationNumber = styled.div`
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+
+  /* Default (inactive) styles */
+  color: #444;
+
+  /* Hover effect for inactive */
+  &:hover {
+    color: #007bff;
+  }
+
+  /* Active state overrides */
+  ${({ active }) =>
+    active &&
+    `
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 2px solid #007bff;
+      color: #007bff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `}
 `;

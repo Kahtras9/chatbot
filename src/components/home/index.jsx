@@ -5,14 +5,14 @@ import {
   Content,
   Heading,
   Description,
-  Button,
+  SeeMoreButton,
   ImageWrapper,
   Specs,
   SpecItem,
   SpecValue,
   SpecLabel,
   Pagination,
-  Dot,
+  PaginationNumber,
 } from "./index.sc";
 
 const Home = () => {
@@ -21,40 +21,47 @@ const Home = () => {
   return (
     <Container>
       <Content>
-        <Heading>
-          RIDING INTO THE FUTURE <br /> WITH DIRT BIKES
-        </Heading>
+        <Heading>RIDING INTO THE FUTURE WITH YAMAHA BIKES</Heading>
         <Description>
-          Our bike collection merges cutting-edge technology with sleek design, delivering an unbeatable ride for conquering off-road trails and pushing the limits of adventure.
+          Our futuristic bike collection merges cutting-edge technology with
+          sleek design, promising an unparalleled ride that transcends
+          traditional boundaries.
         </Description>
-        <Button>SEE BIKES →</Button>
-      </Content>
 
-      <ImageWrapper>
-        <img src={bikeImage} alt="Futuristic Bike" />
+        <SeeMoreButton>
+          SEE MORE <span className="arrow">→</span>
+        </SeeMoreButton>
+
+        <ImageWrapper>
+          <img src={bikeImage} alt="Futuristic Bike" />
+        </ImageWrapper>
+
         <Specs>
           <SpecItem>
-            <SpecValue>250</SpecValue>
+            <SpecValue>1200</SpecValue>
             <SpecLabel>CC ENGINE BIKE</SpecLabel>
           </SpecItem>
           <SpecItem>
-            <SpecValue>130</SpecValue>
+            <SpecValue>450</SpecValue>
             <SpecLabel>KM/H TOP SPEED</SpecLabel>
           </SpecItem>
           <SpecItem>
-            <SpecValue>38</SpecValue>
+            <SpecValue>380</SpecValue>
             <SpecLabel>HORSE POWER</SpecLabel>
           </SpecItem>
         </Specs>
-      </ImageWrapper>
+      </Content>
 
+      {/* Instead of Dot circles, we render numbered pagination. */}
       <Pagination>
         {[1, 2, 3, 4].map((num) => (
-          <Dot
+          <PaginationNumber
             key={num}
             active={num === activeSlide}
             onClick={() => setActiveSlide(num)}
-          />
+          >
+            {num}
+          </PaginationNumber>
         ))}
       </Pagination>
     </Container>

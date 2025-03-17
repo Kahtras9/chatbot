@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const FeedbackContainer = styled.div`
   padding: 4rem;
-  background-color: #1a1a1a;
+  background-color: #1f1f21;
   color: #fff;
 `;
 
 export const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 `;
 
 export const FeedbackContent = styled.div`

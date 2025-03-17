@@ -3,14 +3,14 @@ import { FaChevronDown } from "react-icons/fa";
 
 export const FAQContainer = styled.div`
   padding: 4rem;
-  background-color: #1a1a1a;
+  background-color: #1f1f21;
   color: #fff;
 `;
 
 export const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 `;
 
 export const Description = styled.p`
@@ -44,7 +44,9 @@ export const FAQQuestion = styled.div`
 export const ArrowIcon = styled(FaChevronDown)`
   transition: transform 0.3s ease;
   color: #007bff;
-  ${({ isActive }) => isActive && `
+  ${({ isActive }) =>
+    isActive &&
+    `
     transform: rotate(180deg);
   `}
 `;

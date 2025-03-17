@@ -9,7 +9,14 @@ export const PackageCard = styled.div`
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0; /* subtle border for definition */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); /* slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export const PackageTitle = styled.h2`

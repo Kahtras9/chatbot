@@ -2,7 +2,8 @@ export const packages = [
   {
     id: 1,
     title: "Upper Mustang Motorbike Tour",
-    description: "Experience the thrill of the Upper Mustang trail with scenic mountain routes and cultural discoveries.",
+    description:
+      "Experience the thrill of the Upper Mustang trail with scenic mountain routes and cultural discoveries.",
     details: `
 <strong>Trip Highlights:</strong>  
 <ul>
@@ -16,7 +17,6 @@ export const packages = [
   <li>2000 years old caves of Chosar</li>
   <li>Kora La, the Tibet/Chinese border at 4600 m</li>
 </ul>
-
 <strong>Detail Itinerary for Upper Mustang Motorbike tour:</strong>  
 <b>Day 00:</b> Arrive in Kathmandu, meet our team. Transfer to a selected hotel in Kathmandu.  
 After your arrival at Tribhuwan International Airport, Kathmandu. City Motorbike representative picks up you and drops you off at the selected hotel.  
@@ -64,12 +64,13 @@ Starting early from Pokhara, we ride along the bank of the Kali Gandaki River. T
 
 <strong>Note:</strong>  
 Backup transportation will be available if the group size exceeds five people.  
-`
+`,
   },
   {
     id: 2,
     title: "Motorbike Tour to Manang",
-    description: "Discover the beauty of Manang with an adventurous motorbike tour, exploring local culture, monasteries, and breathtaking mountain views.",
+    description:
+      "Discover the beauty of Manang with an adventurous motorbike tour, exploring local culture, monasteries, and breathtaking mountain views.",
     details: `
 <strong>Trip Highlights:</strong>  
 <ul>
@@ -103,12 +104,13 @@ Backup transportation will be available if the group size exceeds five people.
 
 <strong>Note:</strong>  
 Trip Itinerary can be changed according to your request.
-`
+`,
   },
   {
     id: 3,
     title: "Kulekhani Day Ride Tour",
-    description: "A short, adventurous ride to Kulekhani, Markhu, and Chitlang. Experience boating, hiking, and local village exploration.",
+    description:
+      "A short, adventurous ride to Kulekhani, Markhu, and Chitlang. Experience boating, hiking, and local village exploration.",
     details: `
 <strong>DETAIL ITINERARY FOR DAY RIDE TO KULEKHANI:</strong>  
 <b>Day 01:</b> Ride from Kathmandu to Pharping  
@@ -127,6 +129,6 @@ Trip Itinerary can be changed according to your request.
 
 <strong>Note:</strong>  
 The more riders in your group, the greater the discounts on rates.  
-`
-  }
+`,
+  },
 ];

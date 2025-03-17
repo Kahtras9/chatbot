@@ -34,66 +34,104 @@ export const Overlay = styled.div`
 `;
 
 export const LeftContent = styled.div`
-  padding: 2rem;
+  padding: 10rem 3rem 3rem; /* Increased top padding */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 27rem;
+  align-items: flex-start;
+  height: 100%;
 `;
 
 export const Description = styled.p`
   font-size: 1rem;
   color: #fff;
-  max-width: 400px;
+  max-width: 73%;
 `;
 
 export const VideoButton = styled.button`
-  padding: 0.8rem 2rem;
-  background-color: #007bff;
-  color: #fff;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+
+  padding: 0.75rem 1.25rem;
+  color: #00b4d8;
+  background: transparent;
+  border: 2px solid #00b4d8;
+  border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Orbitron', sans-serif;
+
+  .arrow {
+    font-size: 1rem;
+  }
 
   &:hover {
-    background-color: transparent;
-    border: 2px solid #007bff;
+    background: #00b4d8;
+    color: #111;
   }
 `;
 
 export const RightContent = styled.div`
-  padding: 2rem;
+  padding: 2rem 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 `;
 
 export const Title = styled.h1`
   font-size: 2rem;
   color: #fff;
+  max-width: 48%;
   text-align: right;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 `;
 
 export const NavigationButtons = styled.div`
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 5.8125rem;
+  right: 3rem;
   display: flex;
   gap: 1rem;
 `;
 
 export const NavButton = styled.button`
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.6rem;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  font-size: 1.25rem;
   cursor: pointer;
   transition: 0.3s ease;
 
-  &:hover {
-    background-color: #0056b3;
-  }
+  ${({ direction }) =>
+    direction === "left"
+      ? `
+        /* Left arrow: transparent background, blue border, blue text */
+        background-color: transparent;
+        color: #007bff;
+        border: 2px solid #007bff;
+
+        &:hover {
+          background-color: #007bff;
+          color: #fff;
+        }
+      `
+      : `
+        /* Right arrow: solid blue background, white text */
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #007bff;
+
+        &:hover {
+          background-color: #0056b3;
+          border: 2px solid #0056b3;
+        }
+      `}
 `;
 
 // =====================
@@ -114,7 +152,7 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background: #1a1a1a;
+  background: #1f1f21;
   padding: 1rem;
   border-radius: 10px;
   max-width: 700px;
