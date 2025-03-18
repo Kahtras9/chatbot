@@ -2,44 +2,49 @@ import { faqData } from "../FAQ/FAQData.js";
 import { packages } from "../tour/packageData.js";
 
 export const getBotResponse = (input) => {
-  const lowerInput = input.toLowerCase();
-
+  const lowerInput = input.toLowerCase().trim();
   console.log("User Input:", lowerInput);
 
-  // Greeting Responses
+  // 1. Greeting Response
   if (lowerInput.includes("hello") || lowerInput.includes("hi")) {
     return "Hello! How can I assist you with dirtbike rentals or tours today?";
   }
 
-  // Check in Tour Packages using flexible matching
-  const packageInfo = packages.find((pkg) => {
-    console.log("Checking package title:", pkg.title.toLowerCase());
-    return (
-      lowerInput.includes(pkg.title.toLowerCase()) ||
-      lowerInput.includes(pkg.title.split(" ")[0].toLowerCase()) || 
-      lowerInput.includes(pkg.id.toString())
-    );
+  // 2. Package Matching
+  const matchedPackage = packages.find((pkg) => {
+    // Split package title into keywords (ignoring very short words)
+    const keywords = pkg.title.toLowerCase().split(" ").filter((word) => word.length > 2);
+    // Return true if any keyword from the title is found or if the package ID is mentioned
+    return keywords.some((keyword) => lowerInput.includes(keyword)) || lowerInput.includes(pkg.id.toString());
   });
 
-  if (packageInfo) {
-    console.log("Matched Package:", packageInfo.title);
-    return `Our ${packageInfo.title} package includes: ${packageInfo.details}`;
+  if (matchedPackage) {
+    // If the user asks for details, itinerary, or more info, return full details
+    if (
+      lowerInput.includes("detail") ||
+      lowerInput.includes("itinerary") ||
+      lowerInput.includes("more info")
+    ) {
+      return `Detailed info for "${matchedPackage.title}":\n\n${matchedPackage.details}`;
+    } else {
+      // Otherwise, return a quick summary using the package's description
+      return `Here's a quick summary of "${matchedPackage.title}":\n\n${matchedPackage.description}\n\nFor more details, try asking: "Show me the details of ${matchedPackage.title}"`;
+    }
   }
 
-  // FAQs Matching
-  const faq = faqData.find((faq) => {
-    console.log("Checking FAQ:", faq.question.toLowerCase());
-    return lowerInput.includes(faq.question.toLowerCase());
+  // 3. FAQ Matching (using keyword matching)
+  const matchedFAQ = faqData.find((faq) => {
+    const keywords = faq.question.toLowerCase().split(" ").filter((word) => word.length > 3);
+    return keywords.some((keyword) => lowerInput.includes(keyword));
   });
 
-  if (faq) {
-    console.log("Matched FAQ:", faq.question);
-    return faq.answer;
+  if (matchedFAQ) {
+    return matchedFAQ.answer;
   }
 
-  console.log("No match found.");
+  // 4. Default fallback response
   return "Sorry, I couldn't find the information you're looking for. Please contact our team for more details.";
 };
 
-console.log("FAQs Loaded:", faqData);
-console.log("Packages Loaded:", packages);
+console.log("FAQ Data Loaded:", faqData);
+console.log("Package Data Loaded:", packages);
