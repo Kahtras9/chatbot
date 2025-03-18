@@ -44,7 +44,7 @@ const Footer = () => {
         <p>Contact Us</p>
         <p>Location: Sitapaila, Kathmandu</p>
         <p>Email: yourcompany@email.com</p>
-        <p>Phone: +977 9848714898</p>
+        <p>Phone: +977 9848714898njn</p>
 
         <MapEmbed
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.993645956713!2d85.32524319278775!3d27.686591265034252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bedb46654f%3A0xc803704142369404!2sHamro%20Motorcycle%20Workshop!5e0!3m2!1sen!2snp!4v1741688900159!5m2!1sen!2snp"
