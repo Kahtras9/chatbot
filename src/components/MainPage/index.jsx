@@ -9,6 +9,7 @@ import Booking from "../booking";
 import Feedback from "../feedback";
 import FAQ from "../FAQ";
 import Footer from "../footer";
+import Chatbot from "../chatbot";
 
 const MainPage = () => {
   return (
@@ -36,6 +37,7 @@ const MainPage = () => {
         <FAQ />
       </div>
       <Footer />
+      <Chatbot />
     </>
   );
 };
