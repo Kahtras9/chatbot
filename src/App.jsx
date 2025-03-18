@@ -1,26 +1,16 @@
-import Navbar from "./components/navbar";
-import Home from "./components/home";
-import Video from "./components/video";
-import Spec from "./components/specs";
-import Tour from "./components/tour";
-import Booking from "./components/booking";
-import Feedback from "./components/feedback";
-import FAQ from "./components/FAQ";
-import Footer from "./components/footer";
+// App.jsx
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
+import LoginPage from "./components/login";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <div id="home"><Home /></div>
-      <div id="about"><Video /></div>
-      <div id="bikes"><Spec /></div>
-      <div id="tour"><Tour /></div>
-      <div id="booking"><Booking /></div>
-      <div id="feedbacks"><Feedback /></div>
-      <div id="faq"><FAQ /></div>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<LoginPage />} />
+      <Route path="/*" element={<MainPage />} />
+    </Routes>
   );
 };
 

@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
-/* Container for the entire footer */
+/* Footer Container */
 export const FooterContainer = styled.footer`
-  background-color: #0147ff; /* Adjust to match your desired blue */
+  background-color: #0147ff;
   color: #fff;
   padding: 3rem 5%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  border-radius: 30px 30px 0 0;
 `;
 
-/* Top section: brand on the left, links on the right */
+/* Top Section: Brand on the left, Links on the right */
 export const FooterTop = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
 
-  /* If you want the brand and links side by side on larger screens: */
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
@@ -24,7 +24,6 @@ export const FooterTop = styled.div`
   }
 `;
 
-/* Brand area on the left */
 export const BrandSection = styled.div`
   flex: 1;
 `;
@@ -40,41 +39,59 @@ export const BrandDescription = styled.p`
   line-height: 1.6;
 `;
 
-/* Links area on the right */
+/* Links container on the right */
 export const LinksSection = styled.div`
   flex: 2;
   display: flex;
-  flex-wrap: wrap; /* Wrap columns if screen is narrow */
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: flex-end;
 `;
 
-/* Individual link column */
+/* One column of links */
 export const LinksColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+`;
 
-  h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: bold;
+/* Individual Footer Link */
+export const FooterLink = styled.span`
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: #ffdf00;
+    transform: translateX(5px);
   }
 
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #ffdf00;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
 
-    &:hover {
-      color: #ffdf00;
-    }
+  &:hover::before {
+    opacity: 1;
+    transform: translate(-5px, -50%);
   }
 `;
 
-/* Bottom section: location/contact info on left, policy links on right */
+/* Bottom Section: Info on the left, Policies on the right */
 export const FooterBottom = styled.div`
   display: flex;
   flex-direction: column;
@@ -89,13 +106,13 @@ export const FooterBottom = styled.div`
   }
 `;
 
-/* Location / contact info text */
+/* Contact / location text */
 export const FooterInfo = styled.div`
   font-size: 0.9rem;
   opacity: 0.8;
 `;
 
-/* Container for policy links (Privacy, Terms) */
+/* Policy links container */
 export const PolicyLinks = styled.div`
   display: flex;
   gap: 1rem;

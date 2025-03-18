@@ -1,4 +1,6 @@
+// components/Navbar/index.js
 import React, { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import {
   NavbarContainer,
   NavbarInner,
@@ -10,16 +12,15 @@ import {
 } from "./index.sc";
 
 const Navbar = () => {
+  const location = useLocation();
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        // User is scrolling down
         setShowNav(false);
       } else {
-        // User is scrolling up
         setShowNav(true);
       }
       setLastScrollY(window.scrollY);
@@ -33,6 +34,9 @@ const Navbar = () => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Determine if the current path is '/login'
+  const isLoginActive = location.pathname === "/login";
 
   return (
     <NavbarContainer style={{ top: showNav ? "0" : "-80px" }}>
@@ -59,7 +63,7 @@ const Navbar = () => {
           </NavLinkItem>
         </NavLinks>
         <AuthButtons>
-          <AuthButton to="/login">
+          <AuthButton to="/login" className={isLoginActive ? "active" : ""}>
             <span>Log In</span>
           </AuthButton>
           <AuthButton to="/signup">
