@@ -1,113 +1,114 @@
 import styled from "styled-components";
 
+/* Container for the entire footer */
 export const FooterContainer = styled.footer`
-  padding: 3rem;
-  background-color: #0000FF;
+  background-color: #0147ff; /* Adjust to match your desired blue */
   color: #fff;
+  padding: 3rem 5%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
+  flex-direction: column;
+  gap: 2rem;
 `;
 
-export const FooterLinks = styled.div`
+/* Top section: brand on the left, links on the right */
+export const FooterTop = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  /* If you want the brand and links side by side on larger screens: */
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+`;
+
+/* Brand area on the left */
+export const BrandSection = styled.div`
+  flex: 1;
+`;
+
+export const BrandTitle = styled.h2`
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+`;
+
+export const BrandDescription = styled.p`
+  max-width: 450px;
+  line-height: 1.6;
+`;
+
+/* Links area on the right */
+export const LinksSection = styled.div`
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap; /* Wrap columns if screen is narrow */
+  gap: 2rem;
+  justify-content: flex-end;
+`;
+
+/* Individual link column */
+export const LinksColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffdf00;
+    }
+  }
+`;
+
+/* Bottom section: location/contact info on left, policy links on right */
+export const FooterBottom = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
-export const FooterLink = styled.span`
+/* Location / contact info text */
+export const FooterInfo = styled.div`
+  font-size: 0.9rem;
+  opacity: 0.8;
+`;
+
+/* Container for policy links (Privacy, Terms) */
+export const PolicyLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+/* Individual policy link */
+export const PolicyLink = styled.a`
   color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  position: relative;
-  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
 
   &:hover {
     color: #ffdf00;
-    transform: translateX(5px);
   }
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: -15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: #ffdf00;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  &:hover::before {
-    opacity: 1;
-    transform: translate(-5px, -50%);
-  }
-`;
-
-export const FooterContact = styled.div`
-  max-width: 400px;
-  line-height: 1.7;
-
-  p:first-child {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-  }
-`;
-
-export const FooterBottom = styled.div`
-  margin-top: 2rem;
-  width: 100%;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
-  border-top: 1px solid #444;
-  padding-top: 1rem;
-`;
-
-export const SocialIcons = styled.div`
-  margin-top: 1.2rem;
-  display: flex;
-  gap: 1.5rem;
-`;
-
-export const SocialIcon = styled.a`
-  color: #fff;
-  background: linear-gradient(135deg, #1da1f2, #007bff);
-  padding: 0.7rem;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    background: linear-gradient(135deg, #0d8af0, #0056b3);
-    transform: scale(1.15);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-  }
-`;
-
-export const MapEmbed = styled.iframe`
-  margin-top: 1rem;
-  border: none;
-  border-radius: 12px;
-  width: 100%;
-  height: 200px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 `;

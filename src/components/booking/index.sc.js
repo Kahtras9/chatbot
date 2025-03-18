@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import roadImage from '../../images/road.jpg';
+import roadImage from "../../images/road.jpg";
 
 export const BookingContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
-  background: black;
+  background: #1f1f21;
   color: white;
 `;
 
@@ -14,27 +14,29 @@ export const LeftSection = styled.div`
   background: url(${roadImage}) center/cover no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  /* Aligns content to the top */
+  justify-content: flex-start; /* ensures content starts at the top */
   align-items: center;
-  padding: 500px 20px 20px 20px; /* Top padding to adjust vertical position */
+  padding: 20px; /* reduced padding to place LeftText at the top */
   text-align: center;
+  border-radius: 30px;
 `;
 
-
 export const LeftText = styled.p`
-  font-size: 1.5rem;
-  color: black;
+  font-size: 2.5rem;
+  color: #fff;
   text-align: center;
+  margin-top: 22px; /* removes any default margins */
 `;
 
 export const RightSection = styled.div`
   flex: 1;
-  background: blue;
+  background: #0147ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px;
+  border-radius: 30px;
 `;
 
 export const Title = styled.h1`
@@ -74,22 +76,8 @@ export const Input = styled.input`
   border-radius: 0;
   outline: none;
 
-  ::placeholder {
+  &::placeholder {
     color: white;
-  }
-`;
-
-export const Select = styled.select`
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 1px solid white;
-  background: transparent;
-  color: white;
-  outline: none;
-
-  option {
-    color: black;
   }
 `;
 
@@ -103,7 +91,23 @@ export const TextArea = styled.textarea`
   resize: none;
   outline: none;
 
-  ::placeholder {
+  &::placeholder {
+    color: white;
+  }
+`;
+
+// For Select, browsers have limited support for placeholder styling.
+// If the first option acts as a placeholder, you can target it like this:
+export const Select = styled.select`
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+
+  option:first-child {
     color: white;
   }
 `;

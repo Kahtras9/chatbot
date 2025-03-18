@@ -24,11 +24,19 @@ const Footer = () => {
     <FooterContainer>
       <FooterLinks>
         <FooterLink onClick={() => scrollToSection("home")}>Home</FooterLink>
-        <FooterLink onClick={() => scrollToSection("about")}>About Us</FooterLink>
+        <FooterLink onClick={() => scrollToSection("about")}>
+          About Us
+        </FooterLink>
         <FooterLink onClick={() => scrollToSection("bikes")}>Bikes</FooterLink>
-        <FooterLink onClick={() => scrollToSection("tour")}>Tour Packages</FooterLink>
-        <FooterLink onClick={() => scrollToSection("booking")}>Booking</FooterLink>
-        <FooterLink onClick={() => scrollToSection("feedbacks")}>Feedbacks</FooterLink>
+        <FooterLink onClick={() => scrollToSection("tour")}>
+          Tour Packages
+        </FooterLink>
+        <FooterLink onClick={() => scrollToSection("booking")}>
+          Booking
+        </FooterLink>
+        <FooterLink onClick={() => scrollToSection("feedbacks")}>
+          Feedbacks
+        </FooterLink>
         <FooterLink onClick={() => scrollToSection("faq")}>FAQ</FooterLink>
       </FooterLinks>
 

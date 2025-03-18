@@ -31,12 +31,30 @@ export const PackageDescription = styled.p`
 `;
 
 export const SeeMoreButton = styled.button`
-  padding: 0.6rem 1.2rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.25rem;
+  color: #00b4d8;
+  background: transparent;
+  border: 2px solid #00b4d8;
+  border-radius: 9999px;
   cursor: pointer;
+  transition: all 0.3s ease;
+
+  .arrow {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background: #00b4d8;
+    color: #111;
+  }
 `;
 
 export const PopupContainer = styled.div`

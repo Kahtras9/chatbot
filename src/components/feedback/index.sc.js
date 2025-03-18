@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FeedbackContainer = styled.div`
-  padding: 4rem;
+  padding: 4rem 4rem 0 4rem;
   background-color: #1f1f21;
   color: #fff;
 `;
@@ -44,22 +44,40 @@ export const FeedbackTour = styled.p`
 `;
 
 export const NavWrapper = styled.div`
-  margin-top: 2rem;
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
+  margin-top: -68px; /* Adjust this value as needed */
 `;
 
 export const NavButton = styled.button`
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  font-size: 1.25rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 
-  &:hover {
-    background-color: #0056b3;
-  }
+  ${({ direction }) =>
+    direction === "left"
+      ? `
+        background-color: transparent;
+        color: #007bff;
+        border: 2px solid #007bff;
+
+        &:hover {
+          background-color: #007bff;
+          color: #fff;
+        }
+      `
+      : `
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #007bff;
+
+        &:hover {
+          background-color: #0056b3;
+          border: 2px solid #0056b3;
+        }
+      `}
 `;
