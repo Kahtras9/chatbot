@@ -28,7 +28,7 @@ export const WhiteDiv = styled.div`
 export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
   width: 50vh;
 `;
 
@@ -63,7 +63,7 @@ export const Label = styled.label`
 export const InputWithToggle = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid #d0d5dd;
+  border: 0.0625rem solid #d0d5dd;
   border-radius: 0.3125rem;
   overflow: hidden;
   width: 100%;
@@ -103,7 +103,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: #009edb;
   color: #ffffff;
   border: none;
@@ -151,7 +151,7 @@ export const Divider = styled.div`
   &::after {
     content: "";
     flex: 1;
-    height: 1px;
+    height: 0.0625rem;
     background: #e2e2e2;
   }
   &::before {
@@ -168,7 +168,7 @@ export const OAuthButton = styled.button`
   gap: 0.5rem;
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #d0d5dd;
+  border: 0.0625rem solid #d0d5dd;
   border-radius: 0.3125rem;
   padding: 0.625rem;
   width: 100%;
@@ -190,14 +190,14 @@ export const StyledToastContainer = styled(ToastContainer).attrs({
   draggable: false,
   newestOnTop: true,
 })`
-  width: 300px !important;
-  top: 30px !important;
-  border-radius: 8px !important;
-  padding: 15px !important;
+  width: 18.75rem !important;
+  top: 1.875rem !important;
+  border-radius: 0.5rem !important;
+  padding: 0.9375rem !important;
   position: fixed !important;
 
   .Toastify__toast {
-    min-height: 0px !important;
+    min-height: 0rem !important;
     margin-bottom: 0.5rem;
   }
 `;

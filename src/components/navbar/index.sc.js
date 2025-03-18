@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const NavbarContainer = styled.nav`
   background: #1f1f21;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
 `;
 
 export const NavbarInner = styled.div`
@@ -12,7 +12,7 @@ export const NavbarInner = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 24px 3%;
+  padding: 1.5rem 3%;
 `;
 
 export const Brand = styled.div`
@@ -21,11 +21,11 @@ export const Brand = styled.div`
   font-size: 1.6rem;
   font-weight: 700; /* You can set 400, 700, etc. based on your preference */
   color: #fff;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 0.3125rem rgba(255, 255, 255, 0.3);
 `;
 
 export const NavLinks = styled.div`
@@ -36,7 +36,7 @@ export const NavLinks = styled.div`
 export const NavLinkItem = styled.div`
   /* Use the Orbitron font as well */
   font-family: "Orbitron", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 550;
   text-decoration: none;
   color: #bbb;
@@ -57,13 +57,13 @@ export const AuthButton = styled(Link)`
   position: relative;
   display: inline-block;
   /* Basic styles (adjust as needed) */
-  padding: 10px 24px;
+  padding: 0.625rem 1.5rem;
   font-family: "Orbitron", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: #fff;
   text-decoration: none;
-  border: 2px solid #00b4d8;
+  border: 0.125rem solid #00b4d8;
   background: transparent;
   cursor: pointer;
 
@@ -74,7 +74,7 @@ export const AuthButton = styled(Link)`
   &:hover {
     background: #00b4d8;
     color: #111;
-    box-shadow: 0 0 8px rgba(0, 180, 216, 0.6);
+    box-shadow: 0 0 0.5rem rgba(0, 180, 216, 0.6);
   }
 
   /* Un-skew the child text so it's not slanted */

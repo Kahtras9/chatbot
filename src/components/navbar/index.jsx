@@ -39,7 +39,7 @@ const Navbar = () => {
   const isLoginActive = location.pathname === "/login";
 
   return (
-    <NavbarContainer style={{ top: showNav ? "0" : "-80px" }}>
+    <NavbarContainer style={{ top: showNav ? "0" : "-5rem" }}>
       <NavbarInner>
         <Brand>Yamaha</Brand>
         <NavLinks>

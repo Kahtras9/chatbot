@@ -62,8 +62,8 @@ export const VideoButton = styled.button`
   padding: 0.75rem 1.25rem;
   color: #00b4d8;
   background: transparent;
-  border: 2px solid #00b4d8;
-  border-radius: 9999px;
+  border: 0.125rem solid #00b4d8;
+  border-radius: 624.9375rem;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -101,8 +101,8 @@ export const NavigationButtons = styled.div`
 `;
 
 export const NavButton = styled.button`
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   font-size: 1.25rem;
   cursor: pointer;
@@ -114,7 +114,7 @@ export const NavButton = styled.button`
         /* Left arrow: transparent background, blue border, blue text */
         background-color: transparent;
         color: #007bff;
-        border: 2px solid #007bff;
+        border: .125rem solid #007bff;
 
         &:hover {
           background-color: #007bff;
@@ -125,11 +125,11 @@ export const NavButton = styled.button`
         /* Right arrow: solid blue background, white text */
         background-color: #007bff;
         color: #fff;
-        border: 2px solid #007bff;
+        border: .125rem solid #007bff;
 
         &:hover {
           background-color: #0056b3;
-          border: 2px solid #0056b3;
+          border: .125rem solid #0056b3;
         }
       `}
 `;
@@ -154,16 +154,16 @@ export const ModalOverlay = styled.div`
 export const ModalContent = styled.div`
   background: #1f1f21;
   padding: 1rem;
-  border-radius: 10px;
-  max-width: 700px;
+  border-radius: 0.625rem;
+  max-width: 43.75rem;
   width: 90%;
   position: relative;
 `;
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.625rem;
+  right: 0.625rem;
   background: transparent;
   border: none;
   color: #fff;

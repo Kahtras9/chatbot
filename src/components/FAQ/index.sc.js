@@ -21,7 +21,7 @@ export const Description = styled.p`
 
 export const FAQItem = styled.div`
   margin-bottom: 1rem;
-  border-bottom: 1px solid #444;
+  border-bottom: 0.0625rem solid #444;
   padding-bottom: 1rem;
 `;
 
@@ -30,7 +30,7 @@ export const FAQQuestion = styled.div`
   cursor: pointer;
   padding: 1rem;
   background-color: #333;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   transition: background-color 0.3s ease;
   display: flex;
   justify-content: space-between;
@@ -56,7 +56,7 @@ export const FAQAnswer = styled.div`
   margin-top: 0.5rem;
   padding: 1rem;
   background-color: #222;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #ccc;
   line-height: 1.6;
 

@@ -16,16 +16,16 @@ export const LeftSection = styled.div`
   flex-direction: column;
   justify-content: flex-start; /* ensures content starts at the top */
   align-items: center;
-  padding: 20px; /* reduced padding to place LeftText at the top */
+  padding: 1.25rem; /* reduced padding to place LeftText at the top */
   text-align: center;
-  border-radius: 30px;
+  border-radius: 1.875rem;
 `;
 
 export const LeftText = styled.p`
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
-  margin-top: 22px; /* removes any default margins */
+  margin-top: 1.375rem; /* removes any default margins */
 `;
 
 export const RightSection = styled.div`
@@ -35,20 +35,20 @@ export const RightSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  border-radius: 30px;
+  padding: 2.5rem;
+  border-radius: 1.875rem;
 `;
 
 export const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 `;
 
 export const SubTitle = styled.p`
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 `;
 
 export const Form = styled.form`
@@ -59,7 +59,7 @@ export const Form = styled.form`
 
 export const FlexRow = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 
   & > input {
     flex: 1;
@@ -67,10 +67,10 @@ export const FlexRow = styled.div`
 `;
 
 export const Input = styled.input`
-  padding: 10px;
-  margin: 10px 0;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 0.0625rem solid white;
   background: transparent;
   color: white;
   border-radius: 0;
@@ -82,10 +82,10 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  padding: 10px;
-  margin: 10px 0;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 0.0625rem solid white;
   background: transparent;
   color: white;
   resize: none;
@@ -99,10 +99,10 @@ export const TextArea = styled.textarea`
 // For Select, browsers have limited support for placeholder styling.
 // If the first option acts as a placeholder, you can target it like this:
 export const Select = styled.select`
-  padding: 10px;
-  margin: 10px 0;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 0.0625rem solid white;
   background: transparent;
   color: white;
   outline: none;
@@ -115,10 +115,10 @@ export const Select = styled.select`
 export const Button = styled.button`
   background: white;
   color: black;
-  padding: 15px;
+  padding: 0.9375rem;
   font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   text-transform: uppercase;
 

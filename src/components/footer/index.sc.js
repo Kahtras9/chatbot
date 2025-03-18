@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  border-radius: 30px 30px 0 0;
+  border-radius: 1.875rem 1.875rem 0 0;
 `;
 
 /* Top Section: Brand on the left, Links on the right */
@@ -17,7 +17,7 @@ export const FooterTop = styled.div`
   flex-direction: column;
   gap: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -35,7 +35,7 @@ export const BrandTitle = styled.h2`
 `;
 
 export const BrandDescription = styled.p`
-  max-width: 450px;
+  max-width: 28.125rem;
   line-height: 1.6;
 `;
 
@@ -68,17 +68,17 @@ export const FooterLink = styled.span`
 
   &:hover {
     color: #ffdf00;
-    transform: translateX(5px);
+    transform: translateX(0.3125rem);
   }
 
   &::before {
     content: "";
     position: absolute;
-    left: -15px;
+    left: -0.9375rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
+    width: 0.375rem;
+    height: 0.375rem;
     background-color: #ffdf00;
     border-radius: 50%;
     opacity: 0;
@@ -87,7 +87,7 @@ export const FooterLink = styled.span`
 
   &:hover::before {
     opacity: 1;
-    transform: translate(-5px, -50%);
+    transform: translate(-0.3125rem, -50%);
   }
 `;
 
@@ -96,10 +96,10 @@ export const FooterBottom = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.2);
   padding-top: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;

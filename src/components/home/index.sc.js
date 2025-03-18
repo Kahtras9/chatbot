@@ -50,8 +50,8 @@ export const SeeMoreButton = styled.button`
   padding: 0.75rem 1.25rem;
   color: #00b4d8;
   background: transparent;
-  border: 2px solid #00b4d8;
-  border-radius: 9999px;
+  border: 0.125rem solid #00b4d8;
+  border-radius: 624.9375rem;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -94,13 +94,13 @@ export const SpecItem = styled.div``;
 
 export const SpecValue = styled.div`
   font-family: "Orbitron", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
 `;
 
 export const SpecLabel = styled.div`
   font-family: "Orbitron", sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   color: #aaa;
 `;
@@ -117,7 +117,7 @@ export const Pagination = styled.div`
   /* Display items in a row (horizontal) */
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 1.5rem;
   align-items: center;
 `;
 
@@ -146,7 +146,7 @@ export const PaginationNumber = styled.div`
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      border: 2px solid #007bff;
+      border: .125rem solid #007bff;
       color: #007bff;
       display: flex;
       align-items: center;

@@ -34,7 +34,7 @@ export const Description = styled.p`
 export const ContentWrapper = styled.div`
   position: relative; /* So absolutely positioned elements can be placed inside */
   width: 100%;
-  height: 424px; /* Adjust as needed */
+  height: 26.5rem; /* Adjust as needed */
   overflow: hidden;
 `;
 
@@ -81,7 +81,7 @@ export const SpecItem = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.0625rem solid #ccc;
   padding-bottom: 1rem;
 `;
 
@@ -89,12 +89,12 @@ export const SpecLabel = styled.span`
   font-weight: bold;
   color: #f14b32;
   text-transform: uppercase;
-  font-size: 14px;
-  min-width: 180px;
+  font-size: 0.875rem;
+  min-width: 11.25rem;
 `;
 
 export const SpecValue = styled.span`
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #333;
 `;
 
@@ -114,8 +114,8 @@ export const NavigationButtons = styled.div`
  * and the right arrow to have a solid blue background, use a `direction` prop:
  */
 export const NavButton = styled.button`
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   font-size: 1.25rem;
   cursor: pointer;
@@ -127,7 +127,7 @@ export const NavButton = styled.button`
         /* LEFT arrow: transparent background, blue border, blue text */
         background-color: transparent;
         color: #007bff;
-        border: 2px solid #007bff;
+        border: .125rem solid #007bff;
 
         &:hover {
           background-color: #007bff;
@@ -138,11 +138,11 @@ export const NavButton = styled.button`
         /* RIGHT arrow: solid blue background, white text */
         background-color: #007bff;
         color: #fff;
-        border: 2px solid #007bff;
+        border: .125rem solid #007bff;
 
         &:hover {
           background-color: #0056b3;
-          border: 2px solid #0056b3;
+          border: .125rem solid #0056b3;
         }
       `}
 `;

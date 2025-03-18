@@ -8,14 +8,14 @@ export const PackageCard = styled.div`
   background: #fff;
   padding: 2rem;
   margin-bottom: 2rem;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0; /* subtle border for definition */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* enhanced shadow */
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #e0e0e0; /* subtle border for definition */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* enhanced shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px); /* slight lift on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.3125rem); /* slight lift on hover */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3);
   }
 `;
 
@@ -42,8 +42,8 @@ export const SeeMoreButton = styled.button`
   padding: 0.75rem 1.25rem;
   color: #00b4d8;
   background: transparent;
-  border: 2px solid #00b4d8;
-  border-radius: 9999px;
+  border: 0.125rem solid #00b4d8;
+  border-radius: 624.9375rem;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -73,11 +73,11 @@ export const PopupContainer = styled.div`
 export const PopupContent = styled.div`
   background: #fff;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   width: 60%;
   max-height: 80vh;
   overflow-y: auto;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
 `;
 
 export const CloseButton = styled.button`
@@ -127,7 +127,7 @@ export const BookNowButton = styled.button`
   background-color: #d9534f;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
   font-weight: bold;
 `;
